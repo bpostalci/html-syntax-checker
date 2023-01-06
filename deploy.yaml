@@ -25,6 +25,12 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "500m"
+          env:
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: html-operations-secret
+                  key: api_key
 ---
 kind: Service
 apiVersion: v1
