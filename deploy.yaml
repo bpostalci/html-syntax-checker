@@ -32,12 +32,10 @@ metadata:
   namespace: swe599-demo
   name: html-syntax-checker-service
 spec:
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8081
       targetPort: 8081
-      nodePort: 30002
   selector:
-    app: html-operations-app
+    app: html-syntax-checker-app
 
